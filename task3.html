@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="task3.css" />
+    <title>Task3</title>
+  </head>
+
+  <body>
+    <input type="text" id="text" />
+    <button onclick="convert()">Click here</button>
+    <label id="output"></label>
+  </body>
+
+  <script>
+    function convert() {
+      let input = document.getElementById("text").value;
+      let output = "";
+      let temp = input.split("");
+      for (let i = 0; i < input.length; i++) {
+        temp[i] = String.fromCharCode(temp[i].charCodeAt() + 1);
+        output += temp[i];
+      }
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</html>
